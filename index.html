@@ -15,8 +15,8 @@
             <a-asset-item id="shine" src="gltf/Shine+Sprite.gltf"></a-asset-item>
         </a-assets>
         <a-marker preset="hiro">
+            <a-light type="ambient" color="#FFFFFF" intensity="2" position="0 -100 0"></a-light>
             <a-entity gltf-model="#shine" position="0 0 0" rotation="0 90 0"></a-entity>
-            <a-light type="ambient" color="#FFFFFF" intensity="2" position="0 100 0"></a-light>
         </a-marker>
         <a-entity camera></a-entity>
     </a-scene>
