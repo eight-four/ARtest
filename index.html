@@ -4,34 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web AR hase test</title>
-    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://cdn.rawgit.com/jeromeetienne/ar.js/master/aframe/build/aframe-ar.min.js"></script>
-    <!-- aframe-extras読み込み -->
-    <!-- <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v4.2.0/dist/aframe-extras.min.js"></script> -->
 </head>
 <body style="margin:0px; overflow:hidden;">
     <a-scene embedded arjs="debugUIEnabled:false;">
         <a-marker type="pattern" url="patt/pattern-IMG_1971.patt">
         <a-box position="0 0.5 0" color="yellow" animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-box>
         </a-marker>
-
-        <!--ここで表示したい3Dオブジェクトのファイルを指定-->
-        <!-- <a-assets>
-            <a-asset-item id="model" src="gltf/Shine+Sprite.gltf"></a-asset-item>
-        </a-assets> -->
-
-        <!--ここでマーカーのファイルを指定-->
-        <!-- <a-marker type="pattern" url="patt/pattern-IMG_1971.patt"> -->
-
-            <!--ここで表示したい文字を指定-->
-            <!-- <a-text value="\(^o^)/" position=" -0.3 0 0.5" align="center" rotation="-90 0 0" color="#7993ff">
-            </a-text> -->
-
-            <!--ここで3Dオブジェクトの位置などを指定-->
-            <!-- <a-entity gltf-model="#model" play-all-model-animations="" position="-0.55 0 -0.5" rotation="0 140 -10"  visible="true">
-            </a-entity>
-        </a-marker> -->
-
         <a-entity camera></a-entity>
     </a-scene>
 </body>
