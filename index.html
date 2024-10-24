@@ -5,22 +5,46 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>WebARTest</title>
+    
+    <!-- aframeのCDN -->
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    
+    <!-- aframe-ar.minのCDN -->
     <script src="https://cdn.rawgit.com/jeromeetienne/ar.js/master/aframe/build/aframe-ar.min.js"></script>
 </head>
 
+<!-- bodyを全画面表示　溢れた部分は消去 -->
 <body style="margin:0px; overflow:hidden;">
+    
+    <!-- a-sceneタグでAR空間を作成 -->
+    <!-- embeddedで埋め込み表示 -->
+    <!-- arjs="debugUIEnabled:false;"でデバッグUIを非表示 -->
     <a-scene embedded arjs="debugUIEnabled:false;">
+        
+        <!-- ライトの設定 -->
+        <!-- colorで色を指定 -->
+        <!-- positionで位置を指定 -->
+        <!-- intensityで明るさを指定 -->
         <a-light color="#fff" position="0 1 1" intensity="3"></a-light>
         <a-light color="#fff" position="0 -1 1" intensity="3"></a-light>
+        
+        <!-- a-assetsタグでモデルを読み込む -->
         <a-assets>
+            <!-- idでモデルを識別 -->
             <a-asset-item id="shine" src="gltf/Shine+Sprite.gltf"></a-asset-item>
         </a-assets>
+        
+        <!-- a-markerタグでマーカーを設定 -->
+        <!-- presetでマーカーの種類を指定 -->
         <a-marker preset="hiro">
-            <!-- <a-box position="0 0.5 0" color="yellow"
-                animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-box> -->
+            <!-- a-entityタグで3Dオブジェクトを表示 -->
+            <!-- gltf-modelでモデルを表示 -->
+            <!-- scaleで拡大縮小 -->
+            <!-- rotationで回転 -->
             <a-entity gltf-model="#shine" scale="1 1 1" rotation="-90 0 0"></a-entity>
         </a-marker>
+        
+        <!-- カメラの設定 -->
         <a-entity camera></a-entity>
     </a-scene>
 </body>
